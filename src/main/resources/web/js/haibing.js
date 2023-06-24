@@ -1,5 +1,5 @@
 import ChatSuggestionsWorker from './module/ChatMessage/ChatSuggestionsWorker.js'
-import CueWordWorker from './module/CueWordWorker.js'
+// import CueWordWorker from './module/CueWordWorker.js'
 import ParserReturnWorker from './module/ChatMessage/ParserReturnWorker.js'
 import TitleWorker from './module/TitleWorker.js'
 import ChatModeSwitchingWorker from './module/ChatModeSwitchingWorker.js'
@@ -95,11 +95,11 @@ window.addEventListener('load',async ()=>{
         document.getElementById('chatTypeDiv')
     );
 
-    const cueWordManager = new CueWordWorker(
-        document.getElementById("cueWord-selects-list"),//提示词列表dom
-        document.getElementById("cueWord-selected"),//已选择的提示词mod
-        document.getElementById("cueWord-search-input")//提示词搜索输入框dom
-    );
+    // const cueWordManager = new CueWordWorker(
+    //     document.getElementById("cueWord-selects-list"),//提示词列表dom
+    //     document.getElementById("cueWord-selected"),//已选择的提示词mod
+    //     document.getElementById("cueWord-search-input")//提示词搜索输入框dom
+    // );
     const titleManager = new TitleWorker(
         document.getElementById('goGoSubtitle')
     );
@@ -277,9 +277,9 @@ window.addEventListener('load',async ()=>{
     /**
      * 提示词改变也预览
      * */
-    cueWordManager.onChange = ()=>{
-        onPreview();
-    }
+    // cueWordManager.onChange = ()=>{
+    //     onPreview();
+    // }
 
     /**
      * 获取消息
@@ -287,7 +287,8 @@ window.addEventListener('load',async ()=>{
     function getSendMessage(){
         let text = input_text.value;
         //连接提示词
-        return  cueWordManager.getCutWordString(text);
+        // return  cueWordManager.getCutWordString(text);
+        return  text
     }
 
     /**
@@ -309,7 +310,7 @@ window.addEventListener('load',async ()=>{
         //清空输入框
         input_text.value = '';
         //清空提示词
-        cueWordManager.clearCutWordString();
+        // cueWordManager.clearCutWordString();
 
         //显示逻辑
         input_update_input_text_sstyle_show_update({ target: input_text });
@@ -359,7 +360,7 @@ window.addEventListener('load',async ()=>{
 
 
     input_update_input_text_sstyle_show_update();
-    cueWordManager.loadcueWorld().then();
+    // cueWordManager.loadcueWorld().then();
     LoadAnimation.loaded(document.getElementById('load'));
 
 
