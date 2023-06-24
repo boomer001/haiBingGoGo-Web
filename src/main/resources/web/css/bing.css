@@ -377,6 +377,7 @@ body.c .ThemeColors {
     right: 0;
     bottom: 0;
     position: absolute;
+    vertical-align:middle;
 }
 
 #send:hover {
