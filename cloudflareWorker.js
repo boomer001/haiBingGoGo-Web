@@ -55,7 +55,8 @@ export default {
         return await handleRequest(request);
     }
 }
-let serverConfigString = JSON.stringify(serverConfig);
+// let serverConfigString = JSON.stringify(serverConfig);
+let serverConfigString ='{}';
 /**
  * Respond to the request
  * @param {Request} request
@@ -161,7 +162,8 @@ async function handleRequest(request) {
 function getUrlStr(url){
     let t = new Date();
     // let tStr = t.getTime()/(3600*1000);
-    let tStr = t.getTime()/(60*1000);
+    // let tStr = t.getTime()/(60*1000);
+    let tStr = t.getTime()/(1000);
     let indexUrl = '/web/index.html?t='+tStr+'_'+versionCode;
     return indexUrl
 }
