@@ -318,7 +318,7 @@ body.c .ThemeColors {
     transition: all 0.5s;
     overflow: hidden;
     white-space: normal;
-    margin-right: 0.5rem;
+    
     margin-left: 0.5rem;
     
     opacity: 1;
