@@ -22,8 +22,8 @@ export default class TitleWorker {
      * 重置标题到初始状态
      * */
     restart(){
-        this.setSubtitleText('想发什么呢？让我帮你！');
-        document.title = 'NewBingGoGo:聊天啦啦啦啦';
+        this.setSubtitleText('New Bing 精简版');
+        document.title = 'haiBing 海冰';
     }
     /**
      * 正在创建聊天时
