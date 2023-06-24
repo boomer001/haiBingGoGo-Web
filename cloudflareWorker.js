@@ -2,10 +2,10 @@ var versionCode = 1; //版本变化,会让用户端缓存失效,立即更新网�
 let joinStats = false;  //可选加入统计。 加入统计不会收集任何隐私信息，仅统计访问量。
 //let webPath = 'https://raw.githubusercontent.com/jianjianai/NewBingGoGo-Web/master/src/main/resources'; //web页面地址，可以修改成自己的仓库来自定义前端页面
 let webPath = 'https://raw.githubusercontent.com/boomer001/haiBingGoGo-Web/main/src/main/resources';
-let serverConfig = {
-    "h1": "haiBing海冰",
-    "h2": "New Bing 精简版",
-    "p":"",
+// let serverConfig = {
+    // "h1": "haiBing海冰",
+    // "h2": "New Bing 精简版",
+    // "p":"",
     // "firstMessages":[
     //     "好的，我已清理好板子，可以重新开始了。我可以帮助你探索什么?",
     //     "明白了，我已经抹去了过去，专注于现在。我们现在应该探索什么?",
@@ -44,7 +44,7 @@ let serverConfig = {
     //     "宇宙是如何开始的?",
     //     "如何制作蛋糕?"
     // ]
-}
+// }
 let cookies = [
     ""
 ]

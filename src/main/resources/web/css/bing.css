@@ -318,6 +318,8 @@ body.c .ThemeColors {
     transition: all 0.5s;
     overflow: hidden;
     white-space: normal;
+    margin-right: 0.5rem;
+    opacity: 1;
 }
 
 #tail.open #tail-in #restart,
@@ -328,12 +330,12 @@ body.c .ThemeColors {
     opacity: 0;
 } */
 
-body:has(.my) #restart {
+/* body:has(.my) #restart {
     width: 5rem;
     margin-right: 0.5rem;
     padding: 0;
     opacity: 1;
-}
+} */
 
 #expand{
     font-size: 1rem;
