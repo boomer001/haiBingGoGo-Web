@@ -6431,7 +6431,7 @@ class RandomAddress{
 
     static set randomAddress(value) {
         this._randomAddress = value;
-        console.log("随机地址设置为"+value);
+        console.log("随机ip地址:"+value);
     }
 }
 

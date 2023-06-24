@@ -1,5 +1,5 @@
 import ChatSuggestionsWorker from './module/ChatMessage/ChatSuggestionsWorker.js'
-import CueWordWorker from './module/CueWordWorker.js'
+// import CueWordWorker from './module/CueWordWorker.js'
 import ParserReturnWorker from './module/ChatMessage/ParserReturnWorker.js'
 import TitleWorker from './module/TitleWorker.js'
 import ChatModeSwitchingWorker from './module/ChatModeSwitchingWorker.js'
@@ -95,11 +95,11 @@ window.addEventListener('load',async ()=>{
         document.getElementById('chatTypeDiv')
     );
 
-    const cueWordManager = new CueWordWorker(
-        document.getElementById("cueWord-selects-list"),//提示词列表dom
-        document.getElementById("cueWord-selected"),//已选择的提示词mod
-        document.getElementById("cueWord-search-input")//提示词搜索输入框dom
-    );
+    // const cueWordManager = new CueWordWorker(
+    //     document.getElementById("cueWord-selects-list"),//提示词列表dom
+    //     document.getElementById("cueWord-selected"),//已选择的提示词mod
+    //     document.getElementById("cueWord-search-input")//提示词搜索输入框dom
+    // );
     const titleManager = new TitleWorker(
         document.getElementById('goGoSubtitle')
     );
