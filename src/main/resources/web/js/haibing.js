@@ -38,22 +38,22 @@ function bingChatLoadServerConfig(bingChat,serverConfig){
  * @param serverConfig {Object}
  */
 function domLoadServerConfig(h1,h2,p,serverConfig){
-    if (!serverConfig){
-        return;
-    }
-    function hasShow(element,text){
-        if(element){
-            if (text){
-                element.innerText = text;
-                element.style.opacity = '1';
-            }else {
-                element.style.opacity = '0';
-            }
-        }
-    }
-    hasShow(h1,serverConfig['h1']);
-    hasShow(h2,serverConfig['h2']);
-    hasShow(p,serverConfig['p']);
+    // if (!serverConfig){
+    //     return;
+    // }
+    // function hasShow(element,text){
+    //     if(element){
+    //         if (text){
+    //             element.innerText = text;
+    //             element.style.opacity = '1';
+    //         }else {
+    //             element.style.opacity = '0';
+    //         }
+    //     }
+    // }
+    // hasShow(h1,serverConfig['h1']);
+    // hasShow(h2,serverConfig['h2']);
+    // hasShow(p,serverConfig['p']);
 }
 
 //页面加载完成之后执行
@@ -176,7 +176,8 @@ window.addEventListener('load',async ()=>{
     /**重置聊天框和聊天建议到初始状态 */
     async function reSetStartChatMessage() {
         parserReturnMessage.restart(await bingChat.chatFirstMessages.nextStartMessage());
-        chatSuggestionsManager.set(await bingChat.chatFirstMessages.nextStartProposes());
+        // chatSuggestionsManager.set(await bingChat.chatFirstMessages.nextStartProposes());
+        chatSuggestionsManager.clear();
         titleManager.restart();
     }
     chatModeSwitchingManager.onChatTypeChange = (type,isUser)=>{

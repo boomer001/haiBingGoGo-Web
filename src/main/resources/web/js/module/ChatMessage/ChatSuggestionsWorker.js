@@ -40,11 +40,11 @@ export default class ChatSuggestionsWorker {
     set(suggestions) {
         this.clear();
         this.suggestions = suggestions;
-        // suggestions.forEach((s) => {
-        //     let a = document.createElement('a');
-        //     a.innerText = s;
-        //     this.searchSuggestions.appendChild(a);
-        // });
+        suggestions.forEach((s) => {
+            let a = document.createElement('a');
+            a.innerText = s;
+            this.searchSuggestions.appendChild(a);
+        });
     }
 
     /**
