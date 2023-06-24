@@ -375,7 +375,7 @@ body.c .ThemeColors {
     min-width: 3rem;
     transition: all 0.5s;
     right: 0;
-
+    bottom: 0;
     position: absolute;
     justify-content: center;
     
