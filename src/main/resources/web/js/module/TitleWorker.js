@@ -22,8 +22,10 @@ export default class TitleWorker {
      * 重置标题到初始状态
      * */
     restart(){
-        this.setSubtitleText('New Bing 精简版');
-        document.title = 'haiBing 海冰';
+        // this.setSubtitleText('New Bing 精简版');
+        // document.title = 'haiBing 海冰';
+        document.title = 'haiBing海冰--newBing精简版';
+        
     }
     /**
      * 正在创建聊天时
