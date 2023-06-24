@@ -321,12 +321,12 @@ body.c .ThemeColors {
 }
 
 #tail.open #tail-in #restart,
-#restart {
+/* #restart {
     width: 0;
     margin: 0;
     padding: 0;
     opacity: 0;
-}
+} */
 
 body:has(.my) #restart {
     width: 5rem;
@@ -1024,13 +1024,13 @@ div.markdown-body {
         font-size: 3.5vmin;
     }
 
-    #tail-in:has(#input:focus-visible) #restart,
-    #tail-in:has(#input:hover) #restart {
+    /* #tail-in:has(#input:focus-visible) #restart, */
+    /* #tail-in:has(#input:hover) #restart {
         width: 0;
         margin: 0;
         padding: 0;
         opacity: 0;
-    }
+    } */
 
     .GenerateContentQuery>a>img {
         max-width: 49%;
@@ -1112,13 +1112,13 @@ div.markdown-body {
         width: 49%;
     }
 
-    #tail-in:has(#input:focus-visible) #restart,
+    /* #tail-in:has(#input:focus-visible) #restart,
     #tail-in:has(#input:hover) #restart {
         width: 0;
         margin: 0;
         padding: 0;
         opacity: 0;
-    }
+    } */
 
     /* 聊天部分,在页面内 */
     @keyframes acceptMeaaage {
