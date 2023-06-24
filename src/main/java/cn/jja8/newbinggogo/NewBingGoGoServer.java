@@ -226,8 +226,8 @@ public class NewBingGoGoServer extends NanoWSD {
         addHeaders.forEach(urlConnection::addRequestProperty);
 
         int cookieID = 0;
-        //如果是NewBingGoGoWeb版本
-        if(header.get("newbinggogoweb")!=null){
+        //如果是haiBingGoGoWeb版本
+        if(header.get("haiBingGoGoWeb")!=null){
             //添加配置的随机cookie
             if(Config.cookies.length == 0){
                 return getReturnError("没有任何可用cookie，请前往Cookies.yml添加cookie");

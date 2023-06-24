@@ -84,10 +84,10 @@ window.addEventListener('load',async ()=>{
         document.getElementById('goGoSubtitle')
     );
     titleManager.waitingNext = ()=>{
-        titleManager.setSubtitleText("想创作什么呢？我来帮你！")
+        titleManager.setSubtitleText("？我来帮你！")
     }
     titleManager.restart= ()=>{
-        titleManager.setSubtitleText("想创作什么呢？我来帮你！")
+        titleManager.setSubtitleText("？我来帮你！")
     }
 
 

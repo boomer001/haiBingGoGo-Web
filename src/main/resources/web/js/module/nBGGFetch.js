@@ -10,11 +10,11 @@ import RandomAddress from "./RandomAddress.js";
 export default async function nBGGFetch(url,rr,noAddHeader){
     if(!noAddHeader){
         if(!rr){
-            rr = {headers:{"NewBingGoGoWeb":"true"}};
+            rr = {headers:{"haiBingGoGoWeb":"true"}};
         }else if(!rr.headers){
-            rr.headers = {"NewBingGoGoWeb":"true"};
+            rr.headers = {"haiBingGoGoWeb":"true"};
         }else {
-            rr.headers['NewBingGoGoWeb'] = "true";
+            rr.headers['haiBingGoGoWeb'] = "true";
         }
         rr.headers['randomAddress'] = RandomAddress.randomAddress;
     }
