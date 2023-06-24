@@ -50,6 +50,6 @@ export default class TitleWorker {
      * 等待下一条消息时
      */
     waitingNext(){
-        this.setSubtitleText('可以啦！来发送下一条消息吧！');
+        this.setSubtitleText('回答完毕');
     }
 }
