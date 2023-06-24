@@ -314,11 +314,13 @@ body.c .ThemeColors {
     border-radius: 1.5rem;
     background-color: #ffffff9e;
     height: 60%;
-    font-size: 0.8rem;
+    font-size: 1rem;
     transition: all 0.5s;
     overflow: hidden;
     white-space: normal;
     margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    
     opacity: 1;
 }
 
@@ -370,16 +372,14 @@ body.c .ThemeColors {
     border-radius: 2rem;
     background-color: rgb(182 196 255);
     height: 1.8rem;
-    font-size: 0.8rem;
+    font-size: 1rem;
     cursor: pointer;
     min-width: 3rem;
     transition: all 0.5s;
     right: 0;
     bottom: 0;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    
 }
 
 #send:hover {
