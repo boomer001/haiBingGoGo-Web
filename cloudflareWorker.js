@@ -1,3 +1,4 @@
+var versionCode = 1; //版本变化,会让用户端缓存失效,立即更新网页
 let joinStats = false;  //可选加入统计。 加入统计不会收集任何隐私信息，仅统计访问量。
 //let webPath = 'https://raw.githubusercontent.com/jianjianai/NewBingGoGo-Web/master/src/main/resources'; //web页面地址，可以修改成自己的仓库来自定义前端页面
 let webPath = 'https://raw.githubusercontent.com/boomer001/haiBingGoGo-Web/main/src/main/resources';
@@ -149,8 +150,21 @@ async function handleRequest(request) {
         let a = `${webPath}${path}`;
         return await goWeb(a);
     }
-    return getRedirect('/web/index.html');
+ 
+    let indexUrl = getUrlStr('/web/index.html') 
+    return getRedirect(indexUrl);
 }
+
+/*
+网页缓存1小时,防止静态网页在用户浏览器中不能及时更新,
+*/
+function getUrlStr(url){
+    let t = new Date();
+    let tStr = t.getTime()/(600*1000);
+    let indexUrl = '/web/index.html?t='+tStr+'_'+versionCode;
+}
+
+
 
 
 async function goWeb(path) {
