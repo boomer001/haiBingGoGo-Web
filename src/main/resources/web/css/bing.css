@@ -375,6 +375,8 @@ body.c .ThemeColors {
     min-width: 3rem;
     transition: all 0.5s;
     right: 0;
+     
+    position: relative;
     vertical-align: middle;
     
 }
