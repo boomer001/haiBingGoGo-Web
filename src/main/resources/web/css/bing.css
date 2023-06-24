@@ -318,9 +318,7 @@ body.c .ThemeColors {
     transition: all 0.5s;
     overflow: hidden;
     white-space: normal;
-    
     margin-left: 0.5rem;
-    
     opacity: 1;
 }
 
@@ -368,10 +366,10 @@ body.c .ThemeColors {
 
 #send {
     border: 0;
-    margin: 0 1rem 1rem 0;
+    margin: 0 0.5rem 0.5rem 0;
     border-radius: 1rem;
     background-color: rgb(182 196 255);
-    height: 1.8rem;
+    height: 2rem;
     font-size: 1rem;
     cursor: pointer;
     min-width: 3rem;
