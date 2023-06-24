@@ -24,6 +24,9 @@ export default class SwitchWorker {
      * @param fun  fun(change)当开关状态改变时的回调函数 函数返回 false则阻止开关 change即将要改变到的状态true或false
      * */
     constructor(button,change,fun) {
+        if(!button){
+            return
+        }
         this.button = button;
         this.change = change;
         this.fun = !!fun?fun:()=>{};
