@@ -24,7 +24,7 @@ export default class TitleWorker {
     restart(){
         // this.setSubtitleText('New Bing 精简版');
         // document.title = 'haiBing 海冰';
-        document.title = 'haiBing海冰--newBing精简版';
+        document.title = 'haiBing海冰--NewBing精简版';
         
     }
     /**
