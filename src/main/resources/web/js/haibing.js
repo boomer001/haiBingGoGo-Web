@@ -18,16 +18,16 @@ import {LoadAnimation} from "./module/aToos/AToos.js";
  * @param serverConfig {Object} 配置的json
  */
 function bingChatLoadServerConfig(bingChat,serverConfig){
-    if(serverConfig){
-        let firstMessages = serverConfig["firstMessages"];
-        if( Array.isArray(firstMessages) && firstMessages.length>0  ){
-            bingChat.chatFirstMessages.bingmMessages = firstMessages;
-        }
-        let firstProposes = serverConfig["firstProposes"];
-        if(Array.isArray(firstProposes) && firstProposes.length>0){
-            bingChat.chatFirstMessages.bingProposes = firstProposes;
-        }
-    }
+    // if(serverConfig){
+    //     let firstMessages = serverConfig["firstMessages"];
+    //     if( Array.isArray(firstMessages) && firstMessages.length>0  ){
+    //         bingChat.chatFirstMessages.bingmMessages = firstMessages;
+    //     }
+    //     let firstProposes = serverConfig["firstProposes"];
+    //     if(Array.isArray(firstProposes) && firstProposes.length>0){
+    //         bingChat.chatFirstMessages.bingProposes = firstProposes;
+    //     }
+    // }
 }
 
 /**
