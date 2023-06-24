@@ -63,11 +63,11 @@ window.addEventListener('load',async ()=>{
 
     //加载服务器配置
     let serverConfig
-    try{
-        serverConfig = (await (await nBGGFetch("./resource/config.json")).json());
-    }catch (error){
-        console.warn(error);
-    }
+    // try{
+    //     serverConfig = (await (await nBGGFetch("./resource/config.json")).json());
+    // }catch (error){
+    //     console.warn(error);
+    // }
     domLoadServerConfig(
         document.getElementById("server-h1"),
         document.getElementById("server-h2"),
