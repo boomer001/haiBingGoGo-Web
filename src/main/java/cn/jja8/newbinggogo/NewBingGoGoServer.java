@@ -122,7 +122,7 @@ public class NewBingGoGoServer extends NanoWSD {
             }
             return WebWork.getFile(url);
         }
-        return redirectTo("/web/NewBingGoGo.html");
+        return redirectTo("/web/index.html");
     }
 
     @Override

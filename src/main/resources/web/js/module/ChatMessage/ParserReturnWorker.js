@@ -217,7 +217,7 @@ export default class ParserReturnWorker {
                 p.append("cookieID",CookieID.cookieID);
                 p.append("redirect",rURL.href);
                 p.append("randomAddress",RandomAddress.randomAddress)
-                this.addError(`<p><a href="./ChatImgCAPTCHA.html?${p.toString()}">点击前往验证</a></p>`)
+                this.addError(`<p><a href="./chatimgcaptcha.html?${p.toString()}">点击前往验证</a></p>`)
             }else{
                 this.addError(result.message);
                 this.addError('发生未知错误！');

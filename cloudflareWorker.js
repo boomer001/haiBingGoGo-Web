@@ -1,8 +1,9 @@
 let joinStats = false;  //可选加入统计。 加入统计不会收集任何隐私信息，仅统计访问量。
-let webPath = 'https://raw.githubusercontent.com/jianjianai/NewBingGoGo-Web/master/src/main/resources'; //web页面地址，可以修改成自己的仓库来自定义前端页面
+//let webPath = 'https://raw.githubusercontent.com/jianjianai/NewBingGoGo-Web/master/src/main/resources'; //web页面地址，可以修改成自己的仓库来自定义前端页面
+let webPath = 'https://raw.githubusercontent.com/boomer001/haiBingGoGo-Web/main/src/main/resources';
 let serverConfig = {
-    "h1": "NewBingGoGo",
-    "h2": "简单开始和NewBing聊天",
+    "h1": "haiBing海冰",
+    "h2": "New Bing 精简版",
     "p":"",
     "firstMessages":[
         "好的，我已清理好板子，可以重新开始了。我可以帮助你探索什么?",
@@ -148,7 +149,7 @@ async function handleRequest(request) {
         let a = `${webPath}${path}`;
         return await goWeb(a);
     }
-    return getRedirect('/web/NewBingGoGo.html');
+    return getRedirect('/web/index.html');
 }
 
 
