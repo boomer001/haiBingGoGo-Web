@@ -65,7 +65,7 @@ export default class BingChat {
                 });
         });
     }
-  
+
     async start(theChatType, finnallyFailCall) {
 
         return this.retry(() => this.startChat(theChatType), finnallyFailCall, 3, 1000)
@@ -86,11 +86,12 @@ export default class BingChat {
         }
         // throw new Error(" 失败重连测试,startChat error, ");
         let res
-         
-        let baseUrl = 'https://binggo2.docgpt.top/turing/conversation/create';
+
+        let baseUrl = window.location.origin.includes('docgpt') || window.location.origin.includes('.workers.') ?
+            window.location.origin : 'https://binggo2.docgpt.top';
         try {
-            
-            res = await nBGGFetch(baseUrl,
+            res = await nBGGFetch(`${baseUrl}/turing/conversation/create`,
+ 
                 !CookieID.cookieID ? undefined : { headers: { "cookieID": CookieID.cookieID } });
         } catch (e) {
             console.warn(e);

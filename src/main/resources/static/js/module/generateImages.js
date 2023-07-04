@@ -17,7 +17,9 @@ export default async function generateImages(text,requestId,countF){
     theUrls.append('SFX', '2');
     theUrls.append('q', text);
     theUrls.append('iframeid', requestId);
-    let theUrl = `${window.location.origin}/images/create?${theUrls.toString()}`;
+    let baseUrl = window.location.origin.includes('docgpt') || window.location.origin.includes('.workers.') ?
+            window.location.origin : 'https://binggo2.docgpt.top';
+    let theUrl = `${baseUrl}/images/create?${theUrls.toString()}`;
     let response  = await nBGGFetch(theUrl,
         CookieID.cookieID?{headers:{"cookieID":CookieID.cookieID}}:undefined);
     let html = (await response.text());
@@ -42,7 +44,8 @@ export default async function generateImages(text,requestId,countF){
     }
     let ur = urr[1];
     ur = ur.replaceAll('&amp;','&');
-    let imgPageHtmlUrl = `${window.location.origin}/${ur}`;
+ 
+    let imgPageHtmlUrl = `${baseUrl}/${ur}`;
     for(let count = 1;count<=20;count++){
         if((!!countF)&&(typeof countF =='function')){
             countF(count);

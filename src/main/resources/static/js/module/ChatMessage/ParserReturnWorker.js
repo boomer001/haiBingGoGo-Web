@@ -2,7 +2,7 @@ import generateImages from "../generateImages.js";
 import nBGGFetch from "../nBGGFetch.js";
 import CookieID from "../CookieID.js";
 import RandomAddress from "../RandomAddress.js";
-import {DateFormat} from "../aToos/AToos.js";
+import { DateFormat } from "../aToos/AToos.js";
 /**
  * 解析消息的对象
  * */
@@ -50,25 +50,25 @@ export default class ParserReturnWorker {
             if (event.target.classList.contains("copy-bingcat-markdown")) {
                 let messageElement = event.target.parentElement.parentElement.getElementsByClassName('textBlock')[0];
                 let markdownText = messageElement.dataset.the_markdown_text;
-                let n = markdownText.startsWith('[')? markdownText.indexOf('\n\n')+2:0;//有信息源,[ 开头
+                let n = markdownText.startsWith('[') ? markdownText.indexOf('\n\n') + 2 : 0;//有信息源,[ 开头
                 let answer = markdownText.substring(n);
-                let infoSrc = n ==0? '':  markdownText.substring(0,n);
+                let infoSrc = n == 0 ? '' : markdownText.substring(0, n);
                 let copyTime = DateFormat.format(new Date());
-                let chatText =  `${answer}\n信息源:与haiBing海冰的对话 (${copyTime})\n${infoSrc}`
+                let chatText = `${answer}\n信息源:与haiBing海冰的对话 (${copyTime})\n${infoSrc}`
                 // console.log('copy-bingcat-markdown')
                 // console.log(chatText)
 
                 uni.setClipboardData({
                     data: chatText,
-                    success: function() {
-                    //   console.log('复制成功');
-                      uni.showToast({
-                        title: '复制成功',
-                        duration: 1500
-                      });
+                    success: function () {
+                        //   console.log('复制成功');
+                        uni.showToast({
+                            title: '复制成功',
+                            duration: 1500
+                        });
                     }
-                  })
- 
+                })
+
                 // await navigator.clipboard.writeText(chatText);
             }
             if (event.target.classList.contains("code-copy")) {
@@ -183,7 +183,9 @@ export default class ParserReturnWorker {
             go.geting = true;
             go.innerHTML = '正在请求申请加入候补名单..';
             try {
-                await nBGGFetch(`${window.location.origin}/msrewards/api/v1/enroll?publ=BINGIP&crea=MY00IA&pn=bingcopilotwaitlist&partnerId=BingRewards&pred=true&wtc=MktPage_MY0291`);
+                let baseUrl = window.location.origin.includes('docgpt') || window.location.origin.includes('.workers.') ?
+                    window.location.origin : 'https://binggo2.docgpt.top';
+                await nBGGFetch(`${baseUrl}/msrewards/api/v1/enroll?publ=BINGIP&crea=MY00IA&pn=bingcopilotwaitlist&partnerId=BingRewards&pred=true&wtc=MktPage_MY0291`);
                 go.innerHTML = '请求成功！请刷新页面重试，如果无权限使用请等待几天后重试。'
             } catch (error) {
                 go.innerHTML = '发生错误：' + error.message;
@@ -232,7 +234,7 @@ export default class ParserReturnWorker {
                 //     this.addCAPTCHA();
                 //     this.addError('若无法通过可尝试验证码验证');
                 // } else {
-                    this.addError(`当前账号请求过多，需要通过机器人检查！第${CookieID.cookieID}个账号`);
+                this.addError(`当前账号请求过多，需要通过机器人检查！第${CookieID.cookieID}个账号`);
                 // }
                 let rURL = new URL(window.location.href);
                 rURL.searchParams.set("cookieID", CookieID.cookieID);
@@ -309,7 +311,7 @@ export default class ParserReturnWorker {
                     let sourceAttributionsDIV = this.getByID(message.messageId + 'sourceAttributions', 'div', adaptiveCardsFatherDIV, 'sourceAttributions');
                     this.porserSourceAttributions(message.sourceAttributions, sourceAttributionsDIV);
                     // this.porserSourceAttributions(message.sourceAttributions, adaptiveCardsFatherDIV);
-                    
+
                     // }
                 }
                 //解析suggestedResponses 建议发送的消息，聊天建议
@@ -558,10 +560,10 @@ export default class ParserReturnWorker {
 <div class="copy-bingcat-markdown click "style="font-size: 1rem;" >复制</div>
 <div>${this.throttling.numUserMessagesInConversation} / ${this.throttling.maxNumUserMessagesInConversation}</div>`;
 
-// nxdiv.innerHTML = `
-// <div class="copy-bingcat click " style="font-size: 1rem;">复制</div>
-// <div class="copy-bingcat-markdown click "style="font-size: 1rem;" >复制全部</div>
-// <div>${this.throttling.numUserMessagesInConversation} / ${this.throttling.maxNumUserMessagesInConversation}</div>`;
+            // nxdiv.innerHTML = `
+            // <div class="copy-bingcat click " style="font-size: 1rem;">复制</div>
+            // <div class="copy-bingcat-markdown click "style="font-size: 1rem;" >复制全部</div>
+            // <div>${this.throttling.numUserMessagesInConversation} / ${this.throttling.maxNumUserMessagesInConversation}</div>`;
 
 
         } else if (body.size === 'small') {

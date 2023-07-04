@@ -20,9 +20,10 @@ async function start(){
     theImg.src = './img/loading128.png';
     let res
     try{
- 
-        // res = await nBGGFetch(`${window.location.origin}/edgesvc/turing/captcha/create`,{
-        res = await nBGGFetch(`https://binggo2.docgpt.top/edgesvc/turing/captcha/create`,{    
+        let baseUrl = window.location.origin.includes('docgpt') || window.location.origin.includes('.workers.')  ?
+            window.location.origin : 'https://binggo2.docgpt.top';
+        res = await nBGGFetch(`${baseUrl}/edgesvc/turing/captcha/create`,{
+  
             headers:{"cookieID":cookieId}
         });
     }catch (error){
