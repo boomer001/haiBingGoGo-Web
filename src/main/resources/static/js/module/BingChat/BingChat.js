@@ -87,7 +87,7 @@ export default class BingChat {
         // throw new Error(" 失败重连测试,startChat error, ");
         let res
          
-        let baseUrl = 'https://binggo1.docgpt.top/turing/conversation/create';
+        let baseUrl = 'https://binggo2.docgpt.top/turing/conversation/create';
         try {
             
             res = await nBGGFetch(baseUrl,

@@ -22,7 +22,7 @@ async function start(){
     try{
  
         // res = await nBGGFetch(`${window.location.origin}/edgesvc/turing/captcha/create`,{
-        res = await nBGGFetch(`https://binggo1.docgpt.top/edgesvc/turing/captcha/create`,{    
+        res = await nBGGFetch(`https://binggo2.docgpt.top/edgesvc/turing/captcha/create`,{    
             headers:{"cookieID":cookieId}
         });
     }catch (error){
