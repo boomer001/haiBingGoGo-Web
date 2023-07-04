@@ -20,8 +20,8 @@ export default async function nBGGFetch(url,rr,noAddHeader){
         rr.headers['randomAddress'] = RandomAddress.randomAddress;
     }
   
-   rr.method='GET' 
-   console.log('1nBGGFetch, rr.method:', rr) 
+//    rr.method='OPTIONS' 
+//    console.log('1nBGGFetch, rr.method:', rr) 
    let res = await fetch(url,rr)
    let re = new Response(res.body, res);
 //    let userCookieID = res.headers.get("Cookieid");

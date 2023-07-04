@@ -61,7 +61,7 @@ export default class BingChating {
         // }
 
         let restsrstUrl;
-        let baseUrl = window.location.origin.includes('docgpt') ?
+        let baseUrl = window.location.origin.includes('docgpt') || window.location.origin.includes('.workers.') ?
             window.location.origin : 'https://binggo2.docgpt.top';
         let location = baseUrl;
 
