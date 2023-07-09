@@ -68,7 +68,7 @@ export default class BingChat {
 
     async start(theChatType, finnallyFailCall) {
 
-        return this.retry(() => this.startChat(theChatType), finnallyFailCall, 3, 1000)
+        return this.retry(() => this.startChat(theChatType), finnallyFailCall, 5, 1000)
 
     }
 
