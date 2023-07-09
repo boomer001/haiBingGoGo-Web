@@ -97,7 +97,7 @@ export default class BingChat {
             console.warn(e);
             throw e.isNewBingGoGoError ? e : new Error("无法连接到web服务器，请刷新页面重试:" + e.message);
         }
-        let errorTip = '被拒绝服务,请刷新网页,然后重试'
+        let errorTip = '被拒绝服务,请刷新网页'
         let cookieID = res.headers.get("cookieID");
         if (res.status === 404) {
             // throw new Error(`服务所在地区不提供NewBing服务，请联系服务搭建者切换服务所在地区，第${cookieID}个账号。`);
