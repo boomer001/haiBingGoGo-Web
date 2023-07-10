@@ -56,7 +56,7 @@ export default async function generateImages(text,requestId,countF){
             imgPageHtml = (await (await nBGGFetch(imgPageHtmlUrl,{headers:{"cookieID":cookieID}})).text());
         }catch(e){
             console.error(e);
-            if (e.isNewBingGoGoError) {
+            if (e.isHaiBingError) {
                 throw e;
             }
         }

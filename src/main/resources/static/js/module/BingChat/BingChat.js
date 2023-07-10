@@ -95,7 +95,7 @@ export default class BingChat {
                 !CookieID.cookieID ? undefined : { headers: { "cookieID": CookieID.cookieID } });
         } catch (e) {
             console.warn(e);
-            throw e.isNewBingGoGoError ? e : new Error("无法连接到web服务器，请刷新页面重试:" + e.message);
+            throw e.isHaiBingError ? e : new Error("无法连接到web服务器，请刷新页面重试:" + e.message);
         }
         let errorTip = '被拒绝服务,请刷新网页'
         let cookieID = res.headers.get("cookieID");

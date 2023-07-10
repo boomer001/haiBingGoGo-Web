@@ -93,7 +93,7 @@ export default class BingChating {
             return returnMessage;
         } catch (e) {
             console.warn(e);
-            if (e.isNewBingGoGoError) {
+            if (e.isHaiBingError) {
                 throw new Error(e.message);
             } else {
                 throw new Error("无法连接到web服务器，请刷新页面重试:" + e.message);

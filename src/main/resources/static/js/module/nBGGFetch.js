@@ -32,11 +32,11 @@ export default async function nBGGFetch(url,rr,noAddHeader){
    re.headers.set("cookieID", 0);
    re.headers.set("Report-Only", "");
    re.headers.set("Report-To", "");
-   if(re.headers.get('NewBingGoGoError')){
+   if(re.headers.get('HaiBingError')){
        let json = await re.json();
        let error= new Error(json.message);
        error.value = json.value;
-       error.isNewBingGoGoError = true;
+       error.isHaiBingError = true;
        error.theType = json.type;//newBingGoGo 自定义错误类型
        error.theData = json.data;//newBingGoGo 自定义错误数据
        throw error;
