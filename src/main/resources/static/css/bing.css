@@ -11,7 +11,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 3rem;
+    height: 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -223,7 +223,7 @@ body.c .ThemeColors {
 这是键盘高度
 */
 .tail_up {
-    margin-bottom: 39vh;
+    margin-bottom: 40vh;
 }
 
 #tail-in {
@@ -626,14 +626,14 @@ body {
 }
 
 .ChatRecordsListDivOut.open {
-    width: 20rem;
+    width: 18rem;
 }
 
 .ChatRecordsListIn {
     margin-top: 4rem;
     margin-bottom: 8rem;
-    width: 20rem;
-    min-width: 20rem;
+    width: 18rem;
+    min-width: 17rem;
     /* background-color: #F5F5F5 ; */
     /* background-color: rgb(182 196 255) ; */
     /* background-color:rgb(207 225 255 / 78%)  ; */
