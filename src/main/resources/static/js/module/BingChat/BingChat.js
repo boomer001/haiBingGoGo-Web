@@ -104,7 +104,7 @@ export default class BingChat {
             throw new Error(errorTip + 1);
         }
         let rText = await res.text();
-        console.log('BingChat.js rText:' + rText)
+        console.log('BingChat.js json:' + rText)
 
         if (rText.length < 1) {
             if (cookieID === 'self') {

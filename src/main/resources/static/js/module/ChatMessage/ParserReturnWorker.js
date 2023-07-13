@@ -208,6 +208,7 @@ export default class ParserReturnWorker {
     }
 
     throttling = {
+
         "maxNumUserMessagesInConversation": 0,
         "numUserMessagesInConversation": 0
     };
@@ -556,8 +557,9 @@ export default class ParserReturnWorker {
 
 
             let nxdiv = this.getByClass('throttling', 'div', father);
+            this.throttling.nxdiv = nxdiv;
             nxdiv.innerHTML = `
-<div class="copy-bingcat-markdown click "style="font-size: 1rem;" >复制</div>
+<div class="copy-bingcat-markdown click "style="font-size: 1.1rem;" >复制</div>
 <div>${this.throttling.numUserMessagesInConversation} / ${this.throttling.maxNumUserMessagesInConversation}</div>`;
 
             // nxdiv.innerHTML = `
@@ -568,6 +570,13 @@ export default class ParserReturnWorker {
 
         } else if (body.size === 'small') {
             //原本bing官网的small并没有输出
+        }
+    }
+
+    updateCostTime(costTime) {
+        if (this.throttling.nxdiv) {
+            let nxdiv = this.throttling.nxdiv;
+            nxdiv.innerHTML = `<div "style="padding-right:0.2rem" >耗时:${costTime}s</div> ` + nxdiv.innerHTML
         }
     }
 

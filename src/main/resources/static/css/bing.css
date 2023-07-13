@@ -730,9 +730,9 @@ body {
 
 
 .ChatRecordsListDiv_div_input{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     width: 80%;
-    max-width: 17rem;
+    max-width: 18rem;
      
 }
 
@@ -881,7 +881,7 @@ body {
 
 .adaptiveCardsFatherDIV .throttling {
     text-align: end;
-    font-size: 0.4rem;
+    font-size: 0.8rem;
     margin-top: 0.5rem;
     margin-bottom: -0.8rem;
     border-top: 1px solid #0000005c;
