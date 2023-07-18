@@ -68,8 +68,8 @@ export default class BingChating {
         let p = new URLSearchParams();
         p.append("randomAddress", RandomAddress.randomAddress);
         // restsrstUrl = `${location.replace('http', 'ws')}/sydney/ChatHub?${p.toString()}`;
-        // restsrstUrl = `wss://sydney.vcanbb.chat/sydney/ChatHub?${p.toString()}`;
-        restsrstUrl = `wss://bing.vcanbb.top/sydney/ChatHub?${p.toString()}`;
+        restsrstUrl = `wss://sydney.vcanbb.chat/sydney/ChatHub?${p.toString()}`;
+        // restsrstUrl = `wss://bing.vcanbb.top/sydney/ChatHub?${p.toString()}`;
                              
         try {
             let chatWebSocket = new WebSocket(restsrstUrl);
