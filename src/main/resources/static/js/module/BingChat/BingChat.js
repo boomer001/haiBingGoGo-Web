@@ -89,6 +89,8 @@ export default class BingChat {
 
         let baseUrl = window.location.origin.includes('docgpt') || window.location.origin.includes('.workers.') ?
             window.location.origin : 'https://binggo2.docgpt.top';
+        let url = `${baseUrl}/turing/conversation/create`
+        // console.log(`conversation/create: ${url}`)
         try {
             res = await nBGGFetch(`${baseUrl}/turing/conversation/create`,
  

@@ -184,7 +184,7 @@ export default class ParserReturnWorker {
             go.innerHTML = '正在请求申请加入候补名单..';
             try {
                 let baseUrl = window.location.origin.includes('docgpt') || window.location.origin.includes('.workers.') ?
-                    window.location.origin : 'https://binggo2.docgpt.top';
+                    window.location.origin : 'https://binggo2.docgpt.top';//申请加入候补名单..
                 await nBGGFetch(`${baseUrl}/msrewards/api/v1/enroll?publ=BINGIP&crea=MY00IA&pn=bingcopilotwaitlist&partnerId=BingRewards&pred=true&wtc=MktPage_MY0291`);
                 go.innerHTML = '请求成功！请刷新页面重试，如果无权限使用请等待几天后重试。'
             } catch (error) {
@@ -244,7 +244,7 @@ export default class ParserReturnWorker {
                 p.append("cookieID", CookieID.cookieID);
                 p.append("redirect", rURL.href);
                 p.append("randomAddress", RandomAddress.randomAddress)
-                this.addError(`<p><a href="./chatimgcaptcha.html?${p.toString()}">点击前往验证</a></p>`)
+                this.addError(`<p><a href="/static/chatimgcaptcha.html?${p.toString()}">点击前往验证</a></p>`)
             } else {
                 this.addError(result.message);
                 this.addError('发生未知错误！');
@@ -624,7 +624,8 @@ export default class ParserReturnWorker {
             if (json.type === "close") {
                 console.log(json.mess)
                 if (!json.ok) {
-                    this.addError("聊天异常中断了！可能是网络问题。");
+                    this.addError("需木弟子,能访问 https://sydney.bing.com/ ");
+                    // this.addError("聊天异常中断了！可能是网络问题。");
                     fun(new OnMessageFunEvent('close-accident', '意外关闭'));
                 } else {
                     fun(new OnMessageFunEvent('close', '回复结束'));

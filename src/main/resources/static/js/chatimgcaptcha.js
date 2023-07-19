@@ -22,8 +22,10 @@ async function start(){
     try{
         let baseUrl = window.location.origin.includes('docgpt') || window.location.origin.includes('.workers.')  ?
             window.location.origin : 'https://binggo2.docgpt.top';
-        res = await nBGGFetch(`${baseUrl}/edgesvc/turing/captcha/create`,{
-  
+        let url = `${baseUrl}/edgesvc/turing/captcha/create`    
+        // console.log(`start captcha/create: ${url}`)
+        res = await nBGGFetch(url,{
+            
             headers:{"cookieID":cookieId}
         });
     }catch (error){
@@ -50,8 +52,15 @@ async function start(){
         q.append("regionId","0");
         q.append("value",theInput.value);
         let res
+        // let location = 'https://bing.vcanbb.top' ;//window.location.origin
+        let baseUrl = window.location.origin.includes('docgpt') || window.location.origin.includes('.workers.')  ?
+            window.location.origin : 'https://binggo2.docgpt.top'; // true是https://binggo1.docgpt.top
+        baseUrl = window.location.origin.includes('.dahai123.') || window.location.origin.includes('.pages.') ?
+            'https://binggo1.docgpt.top' : 'https://binggo2.docgpt.top';   
+        let url = `${baseUrl}/edgesvc/turing/captcha/verify?${q.toString()}`     
+        // console.log('提交按钮 captcha.js url:',url)    
         try{
-            res = await nBGGFetch(`${window.location.origin}/edgesvc/turing/captcha/verify?${q.toString()}`,{
+            res = await nBGGFetch(url,{
                 headers:{"cookieID":cookieId}
             });
         }catch (error){

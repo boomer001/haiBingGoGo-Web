@@ -31,7 +31,8 @@ export default class ChatFirstMessages{
     ];
 
     bingmMessages = [
-        '请提问...'
+        '需木弟子,能访问 https://sydney.bing.com/'
+        // '请提问...'
         // '好的，我已清理好板子，可以重新开始了。我可以帮助你探索什么?',
         // '明白了，我已经抹去了过去，专注于现在。我们现在应该探索什么?',
         // '重新开始总是很棒。问我任何问题!',
